@@ -1,0 +1,18 @@
+# GitLab CI/CD for AI-Powered Pentest
+stages:
+  - pentest
+
+pentest_job:
+  stage: pentest
+  image: python:3.10
+  script:
+    - pip install -r requirements.txt
+    - pip install selenium python-docx reportlab hvac boto3 azure-identity azure-keyvault-secrets
+    - python pentest_framework.py
+  artifacts:
+    paths:
+      - pentest_report.json
+      - pentest_report.pdf
+      - pentest_report.docx
+      - dashboard_data.json
+      - attestation_certificate.json
