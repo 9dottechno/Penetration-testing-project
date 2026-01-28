@@ -3,3 +3,4 @@ requests
 jsonschema
 pyyaml
 beautifulsoup4
+lxml
