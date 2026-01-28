@@ -7,3 +7,4 @@ lxml
 openai
 python-dotenv
 reportlab
+python-docx
